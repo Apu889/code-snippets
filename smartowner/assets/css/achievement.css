@@ -6,6 +6,10 @@
     background-image: url('../img/achievement/close-x.svg');
 }
 
+.icon-x-white {
+    background-image: url('../img/achievement/close-x-white.svg');
+}
+
 .icon-right-blu {
     background-image: url('../img/achievement/back-blu.svg');
     transform: rotate(180deg);
@@ -60,6 +64,12 @@
 .achievement-page[data-page="0"],
 .achievement-page.last-page {
     background-color: #CBDDF8;
+}
+
+.achievement-page .top-right {
+    position: absolute;
+    right: 20px;
+    top: 16px;
 }
 
 .achievement-page .f-28 {
@@ -281,6 +291,28 @@
         opacity: 0;
         transform: translateY(0px);
     }
+}
+
+/* --- some tweaks --- */
+.modal-open .modal.mod {
+    left: auto !important;
+    max-width: none;
+}
+
+.achievement-page .modal {
+    color: black;
+}
+
+.achievement-page .modal-img {
+    text-align: center;
+    /* background: blue; */
+    padding: 30px;
+    background: linear-gradient(300deg, #0C3483 0%, #A2B6DF 100%, #6B8CCE 100%);
+}
+
+.achievement-page .modal-img img {
+    width: auto;
+    max-height: 240px;
 }
 
 /* --- individual page style --- */

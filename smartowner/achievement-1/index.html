@@ -161,7 +161,7 @@
                                 anda.
                             </div>
                             <div class="m-t-20 ach-btn-wrapper">
-                                <button class="btn smart-primary has-icon m-t-20">
+                                <button class="btn smart-primary has-icon m-t-20" data-toggle="modal" data-target="#modalPiagam">
                                     Pesan Piagam
                                 </button>
                                 <div class="separator-mini m-t-20 m-d-20"></div>
@@ -201,10 +201,30 @@
             </div>
         </div>
 
+        <div class="modal mod fade" id="modalPiagam" role="dialog">
+            <div class="modal-dialog modal-lg bani-modal">
+                <div class="modal-content">
+                    <div class="modal-headx w-limit2">
+                        <div class="icon-24 icon-x-white top-right" data-dismiss="modal"></div>
+                    </div>
+                    <div class="modal-img">
+                        <img src="../assets/img/achievement/piagam.png" alt="">
+                    </div>
+                    <div class="modal-bodyy w-limit2 w-100 p-x-20 p-y-20">
+                        Piagam bertuliskan data <b>(total kuantitas yang anda terima & total konsumen)</b> anda di 2020. Pemesanan akan dikenakan biaya <b>Rp xxx.xxx</b> serta pengiriman.
+                        <div class="button-wrapper m-t-24 w-limit w-100">
+                            <button class="btn smart-secondary">Pesan melalui WA</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script>
-        // get rid mobile's browser navbar
+        // get rid mobile's browser navbar (experimen gagal)
         function vHeight() {
             var vh = window.innerHeight * 0.01;
             var vhx = vh * 100 + 'px';
@@ -224,7 +244,7 @@
             height: '100vh',
             arrows: false,
             pagination: false,
-            speed: 800
+            speed: 800,
         }).mount();
 
         // store data-page attribute & last-page class 
