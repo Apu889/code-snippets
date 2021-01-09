@@ -196,6 +196,13 @@
     max-width: calc(100% - 84px);
 }
 
+.ach-wrapper .splide__slide .illustration.bottom-left {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+}
+
 .ach-wrapper .splide__slide ul {
     margin: 20px 0px;
     padding: 0px;
