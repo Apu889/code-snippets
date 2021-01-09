@@ -102,6 +102,9 @@
 
                     <li class="splide__slide">
                         <div class="w-limit2 content">
+                            <div class="illustration m-d-20">
+                                <img src="../assets/img/achievement/londi.jpg" alt="" class="outlet-logo">
+                            </div>
                             <div class="f-20">
                                 Outlet <span>Londi Laundry Digital 1</span> menjadi laundry terfavorit karena banyak
                                 dikunjungi oleh konsumen. Diikuti outlet <span>Londi 2</span>, <span>Londi 3</span>,
@@ -203,7 +206,8 @@
     </div>
 
     <script>
-        function lol() {
+        // get rid mobile's browser navbar
+        function vHeight() {
             var vh = window.innerHeight * 0.01;
             var vhx = vh * 100 + 'px';
             return vhx;
@@ -216,6 +220,7 @@
 
         const ach = document.getElementById('achievement-page');
 
+        // splide init
         var achieve = new Splide('.ach-wrapper', {
             direction: 'ttb',
             height: '100vh',
@@ -224,10 +229,7 @@
             speed: 800
         }).mount();
 
-        achieve.on('mounted', function () {
-            ach.classList.add('first-page');
-        })
-
+        // store data-page attribute & last-page class 
         achieve.on('move', function () {
             ach.setAttribute('data-page', achieve.index);
             if (achieve.index == (achieve.length - 1)) {
@@ -235,16 +237,15 @@
             } else {
                 ach.classList.remove('last-page');
             }
-            // alert(achieve.index)
         })
 
+        // click on chevron button to go to next page
         document.querySelector('.scroller').addEventListener('click', function () {
             achieve.go('>')
-            // achieve.go(achieve.length - 1)
         })
 
+        // add mousewheel function
         window.addEventListener('wheel', throttle(scrollinx, 2000));
-
         function scrollinx(e) {
             if (e.deltaY < 0) {
                 achieve.go('<');
@@ -255,6 +256,7 @@
             }
         }
 
+        // to efficiently manage function call
         function throttle(callback, limit) {
             var wait = false;
             return function (...args) {
