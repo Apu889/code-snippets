@@ -31,6 +31,10 @@
     background-image: url('../img/achievement/share.svg');
 }
 
+.icon-img {
+    background-image: url('../img/achievement/img.svg');
+}
+
 .bg-1st {
     background-color: #CBDDF8;
 }
@@ -163,12 +167,25 @@
     background-position: left center;
 }
 
+.achievement-page.last-page .ach-header {
+    justify-content: center;
+}
+
+.achievement-page.last-page .ach-header #btn-share {
+    display: none;
+}
+
+.achievement-page.last-page .ach-header .ach-logo {
+    background-position: center;
+}
+
 /* --- content --- */
 
 .achievement-page[data-page] #btn-exit,
 .achievement-page[data-page="0"] #btn-share {
     display: none;
 }
+
 .achievement-page[data-page="0"] #btn-exit {
     display: block;
 }
@@ -184,12 +201,17 @@
 
 .ach-wrapper .splide__slide .illustration {
     text-align: center;
+    position: relative;
 }
 
 .ach-wrapper .splide__slide .illustration img {
     width: auto;
     max-width: 100%;
     max-height: 320px;
+}
+
+.ach-wrapper .splide__slide .illustration img.abs {
+    position: absolute;
 }
 
 .ach-wrapper .splide__slide .illustration img.img-lg {
@@ -257,7 +279,7 @@
     transition: opacity .5s;
 }
 
-.achievement-page[data-page="0"] .ach-footer .scroll-desc{
+.achievement-page[data-page="0"] .ach-footer .scroll-desc {
     opacity: 1;
 }
 
@@ -287,13 +309,15 @@
 }
 
 @keyframes fadeDown {
-    0% { 
+    0% {
         opacity: 0;
         transform: translateY(-20px)
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translateY(0px);
@@ -324,7 +348,7 @@
 
 /* --- individual page style --- */
 .ach-wrapper .splide__slide .illustration img.outlet-logo {
-    box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.05);
+    box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.05);
     width: 160px;
     height: 160px;
 }
@@ -333,4 +357,48 @@
     width: 230px;
     height: 230px;
     background-color: black;
+}
+
+.bouncing {
+    animation: bounce 2s linear infinite;
+}
+
+.updown {
+    animation: updown 2.5s linear infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0px, 0px, 0);
+    }
+
+    25% {
+        transform: translate3d(-5px, -4px, 0);
+    }
+
+    50% {
+        transform: translate3d(0px, -8px, 0);
+    }
+
+    75% {
+        transform: translate3d(-2px, -2px, 0);
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0);
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translate3d(0px, -0px, 0);
+    }
+
+    50% {
+        transform: translate3d(0px, -16px, 0);
+    }
+
+    100% {
+        transform: translate3d(0px, -0px, 0);
+    }
 }
