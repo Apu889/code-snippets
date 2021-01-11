@@ -237,11 +237,11 @@
             var vhx = vh * 100 + 'px';
             return vhx;
         }
-        // window.addEventListener('resize', () => {
-        //     // We execute the same script as before
-        //     lol();
-        //     achieve.refresh();
-        // })
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            // vHeight();
+            // achieve.refresh();
+        })
 
         const ach = document.getElementById('achievement-page');
 
@@ -274,10 +274,10 @@
         function scrollinx(e) {
             if (e.deltaY < 0) {
                 achieve.go('<');
-                console.log('scrolling up');
+                // console.log('scrolling up');
             } else if (e.deltaY > 0) {
                 achieve.go('>');
-                console.log('scrolling down');
+                // console.log('scrolling down');
             }
         }
 
